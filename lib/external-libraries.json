@@ -3,7 +3,7 @@
     "python": {
       "remote": "git@github.com:norahalkhalifah-star/dss-github.git",
       "checkout": "refs/heads/code-libraries",
-      "remotePath": "https://github.com/norahalkhalifah-star/dss-github/blob/code-libraries/date_handling.py",
+      "remotePath": "",
       "isDirty": false
     }
   },
