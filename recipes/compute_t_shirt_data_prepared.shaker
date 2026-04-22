@@ -88,7 +88,7 @@
         ],
         "timezone_id": "UTC",
         "appliesTo": "SINGLE_COLUMN",
-        "lang": "fr_FR",
+        "lang": "en_US",
         "outType": {
           "name": "out",
           "type": "date"
