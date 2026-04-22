@@ -1,6 +1,48 @@
 {
   "columnsSelection": {
-    "mode": "ALL"
+    "mode": "ALL",
+    "list": [
+      {
+        "d": true,
+        "name": "order_date"
+      },
+      {
+        "d": true,
+        "name": "order_date_parsed"
+      },
+      {
+        "d": true,
+        "name": "pages_visited"
+      },
+      {
+        "d": true,
+        "name": "order_id"
+      },
+      {
+        "d": true,
+        "name": "customer_id"
+      },
+      {
+        "d": true,
+        "name": "tshirt_category"
+      },
+      {
+        "d": true,
+        "name": "tshirt_price"
+      },
+      {
+        "d": true,
+        "name": "tshirt_quantity"
+      },
+      {
+        "d": true,
+        "name": "total"
+      },
+      {
+        "d": true,
+        "name": "total_euro"
+      }
+    ]
   },
   "explorationSampling": {
     "_refreshTrigger": 0,
@@ -30,8 +72,52 @@
   "explorationFilters": [],
   "columnOrder": [],
   "columnUseScientificNotationByName": {},
-  "exploreUIParams": {},
-  "steps": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "DateParser",
+      "params": {
+        "outCol": "order_date_parsed",
+        "formats": [
+          "yyyy/MM/dd"
+        ],
+        "columns": [
+          "order_date"
+        ],
+        "timezone_id": "UTC",
+        "appliesTo": "SINGLE_COLUMN",
+        "lang": "auto",
+        "outType": {
+          "name": "out",
+          "type": "date"
+        }
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": true,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FilterOnBadType",
+      "params": {
+        "considerEmptyAsInvalid": false,
+        "booleanMode": "AND",
+        "columns": [
+          "customer_id"
+        ],
+        "action": "REMOVE_ROW",
+        "appliesTo": "SINGLE_COLUMN",
+        "type": "LongMeaning"
+      },
+      "alwaysShowComment": false
+    }
+  ],
   "maxProcessedMemTableBytes": -1,
   "previewMode": "ALL_ROWS",
   "vizSampling": {
@@ -59,7 +145,18 @@
   },
   "analysisColumnData": {},
   "flagNumericValues": true,
-  "columnWidthsByName": {},
+  "columnWidthsByName": {
+    "pages_visited": 113,
+    "tshirt_category": 155,
+    "order_date": 120,
+    "total": 134,
+    "order_date_parsed": 183,
+    "total_euro": 134,
+    "tshirt_quantity": 128,
+    "tshirt_price": 134,
+    "customer_id": 100,
+    "order_id": 106
+  },
   "sorting": [],
   "globalSearchQuery": "",
   "coloring": {
