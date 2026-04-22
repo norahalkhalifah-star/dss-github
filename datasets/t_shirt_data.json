@@ -72,7 +72,7 @@
       {"name":"tshirt_price","type":"double"},
       {"name":"tshirt_quantity","type":"bigint"},
       {"name":"total","type":"double"},
-      {"name":"total_euro","type":"double"}
+      {"name":"total_yen","type":"double"}
     ],
     "userModified": false
   },
