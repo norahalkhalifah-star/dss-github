@@ -1,18 +1,6 @@
 {
-  "gitReferences": {
-    "python": {
-      "checkout": "refs/heads/code-libraries",
-      "remotePath": "",
-      "lastHash": "93ec0b97c2a43e81ece14e20e979bef18274f40b",
-      "conflictingFiles": [],
-      "resolvedFiles": [],
-      "faultyHash": "",
-      "isDirty": true
-    }
-  },
-  "pythonPath": [
-    "python"
-  ],
+  "gitReferences": {},
+  "pythonPath": [],
   "rsrcPath": [
     "R"
   ],
