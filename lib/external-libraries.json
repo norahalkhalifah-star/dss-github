@@ -1,7 +1,6 @@
 {
   "gitReferences": {
     "python": {
-      "remote": "git@github.com:norahalkhalifah-star/dss-github.git",
       "checkout": "refs/heads/code-libraries",
       "remotePath": "",
       "lastHash": "93ec0b97c2a43e81ece14e20e979bef18274f40b",
