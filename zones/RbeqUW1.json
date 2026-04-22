@@ -1,7 +1,16 @@
 {
   "name": "Data Summary by T-shirt",
   "color": "#087ABF",
-  "items": [],
+  "items": [
+    {
+      "objectId": "t_shirt_data_by_tshirt_category",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_t_shirt_data_by_tshirt_category",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
