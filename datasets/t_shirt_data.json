@@ -71,7 +71,8 @@
       {"name":"tshirt_category","type":"string","maxLength":16777216},
       {"name":"tshirt_price","type":"double"},
       {"name":"tshirt_quantity","type":"bigint"},
-      {"name":"total","type":"double"}
+      {"name":"total","type":"double"},
+      {"name":"total_euro","type":"double"}
     ],
     "userModified": false
   },
