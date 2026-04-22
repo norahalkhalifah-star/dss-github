@@ -1,20 +1,37 @@
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # -*- coding: utf-8 -*-
 import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
+from io import BytesIO
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
-Input_Data = dataiku.Folder("9dgAXSxw")
-Input_Data_info = Input_Data.get_info()
+Input_Datasets = dataiku.Folder("9dgAXSxw")
+Input_Datasets_info = Input_Datasets.get_info()
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+file_paths = Input_Datasets.list_paths_in_partition()
+first_file_path = file_paths[0]
 
-# Compute recipe outputs
-# TODO: Write here your actual code that computes the outputs
-# NB: DSS supports several kinds of APIs for reading and writing data. Please see doc.
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+with Input_Datasets.get_download_stream(first_file_path) as f:
+    data = f.read()
 
-t_shirt_data_df = ... # Compute a Pandas dataframe to write into t_shirt_data
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df = pd.read_csv(BytesIO(data))
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+df['total'] = df['tshirt_price'] * df['tshirt_quantity']
 
+# update text category description
+df['tshirt_category'] = df['tshirt_category'].str.replace('Wh ', 'White ')
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
+processed_dataset_df = df
+
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
-t_shirt_data = dataiku.Dataset("t_shirt_data")
-t_shirt_data.write_with_schema(t_shirt_data_df)
+# Dataset processed_data renamed to t_shirt_data by neba.nfonsang on 2024-09-16 20:58:07
+processed_dataset = dataiku.Dataset("t_shirt_data")
+processed_dataset.write_with_schema(processed_dataset_df)
