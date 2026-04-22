@@ -1,6 +1,15 @@
 {
-  "gitReferences": {},
-  "pythonPath": [],
+  "gitReferences": {
+    "python": {
+      "remote": "git@github.com:norahalkhalifah-star/dss-github.git",
+      "checkout": "refs/heads/code-libraries",
+      "remotePath": "https://github.com/norahalkhalifah-star/dss-github/tree/code-libraries/data_prep",
+      "isDirty": false
+    }
+  },
+  "pythonPath": [
+    "python"
+  ],
   "rsrcPath": [
     "R"
   ],
