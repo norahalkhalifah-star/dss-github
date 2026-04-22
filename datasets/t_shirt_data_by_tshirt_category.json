@@ -65,6 +65,9 @@
   "schema": {
     "columns": [
       {"name":"tshirt_category","type":"string","maxLength":16777216},
+      {"name":"total_min","type":"double"},
+      {"name":"total_max","type":"double"},
+      {"name":"total_avg","type":"double"},
       {"name":"count","type":"bigint"}
     ],
     "userModified": true
