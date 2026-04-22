@@ -1,7 +1,16 @@
 {
   "name": "Data Preparation",
   "color": "#465A64",
-  "items": [],
+  "items": [
+    {
+      "objectId": "t_shirt_data_prepared",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_t_shirt_data_prepared",
+      "objectType": "RECIPE"
+    }
+  ],
   "shared": [],
   "position": {},
   "tags": [],
