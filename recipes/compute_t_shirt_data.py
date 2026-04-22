@@ -31,6 +31,8 @@ df['total_euro'] = df['tshirt_price'] * df['tshirt_quantity']*0.90
 # update text category description
 df['tshirt_category'] = df['tshirt_category'].str.replace('Wh ', 'White ')
 
+# change to happen
+
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 processed_dataset_df = df
 
