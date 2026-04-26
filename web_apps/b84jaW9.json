@@ -4,7 +4,8 @@
   "params": {
     "autoStartBackend": false,
     "envSelection": {
-      "envMode": "INHERIT"
+      "envMode": "EXPLICIT_ENV",
+      "envName": "INTERNAL_document_extraction_v1"
     },
     "nbProcesses": 0,
     "serveLocally": true,
